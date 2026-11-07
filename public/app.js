@@ -93,3 +93,6 @@ if (navigator.doNotTrack === '1') {
   $('measurement').disabled = true;
   $('measurement-status').textContent = 'Your browser’s Do Not Track preference is respected. Usage counts are off.';
 }
+// Public links preselect only a known symptom, never answers or a diagnosis.
+const linkedSymptom = symptoms.find(symptom => symptom.id === new URL(location.href).searchParams.get('symptom'));
+if (linkedSymptom) choose(linkedSymptom);
