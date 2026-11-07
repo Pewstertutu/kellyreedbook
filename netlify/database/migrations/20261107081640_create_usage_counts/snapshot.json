@@ -1,0 +1,88 @@
+{
+  "version": "8",
+  "dialect": "postgres",
+  "id": "db784e20-dcb6-4117-9609-0c224284ab95",
+  "prevIds": [
+    "00000000-0000-0000-0000-000000000000"
+  ],
+  "ddl": [
+    {
+      "isRlsEnabled": false,
+      "name": "usage_counts",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "type": "date",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "day",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "usage_counts"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "event",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "usage_counts"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "symptom",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "usage_counts"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "1",
+      "generated": null,
+      "identity": null,
+      "name": "count",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "usage_counts"
+    },
+    {
+      "columns": [
+        "day",
+        "event",
+        "symptom"
+      ],
+      "nameExplicit": false,
+      "name": "usage_counts_pkey",
+      "entityType": "pks",
+      "schema": "public",
+      "table": "usage_counts"
+    },
+    {
+      "value": "\"count\" > 0",
+      "name": "usage_count_positive",
+      "entityType": "checks",
+      "schema": "public",
+      "table": "usage_counts"
+    }
+  ],
+  "renames": []
+}
